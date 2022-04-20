@@ -6,6 +6,8 @@
   list-style: none;
   text-decoration: none;
   font-family: "Roboto", sans-serif;
+  --primaryColor: rgb(13, 87, 13);
+  --secondaryColor: rgb(141, 201, 113);
 }
 
 h3 {
@@ -17,7 +19,8 @@ h4 {
 }
 
 header {
-  width: 100vw;
+  width: 100%;
+  height: 7rem;
   border-bottom: 1px solid black;
   position: relative;
   display: -webkit-box;
@@ -29,13 +32,15 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background-color: var(--secondaryColor);
   /***MENU MOBILE ***/
   /***MENU MOBILE ***/
 }
 
 header .logo {
-  width: 9rem;
+  width: 6rem;
   margin-left: 15px;
+  border-radius: 100%;
 }
 
 header .nav {
@@ -62,10 +67,14 @@ header .nav ul li {
 }
 
 header .nav ul li:hover {
-  background-color: rgba(2, 38, 155, 0.733);
+  background-color: var(--primaryColor);
   color: white;
   width: 5.5rem;
-  border-radius: 10px;
+  border-radius: 8px;
+}
+
+header .nav ul li:hover a {
+  color: white;
 }
 
 header .nav ul li a {
@@ -196,7 +205,7 @@ header .mobile nav .menuMobile.aberto {
 
 .containerCarousel {
   width: 100%;
-  background-color: rgba(2, 38, 155, 0.733);
+  background-color: var(--primaryColor);
   height: 27rem;
   padding: 5px 0;
 }
@@ -326,6 +335,9 @@ header .mobile nav .menuMobile.aberto {
 .content .services {
   text-align: center;
   width: 100%;
+  background-color: var(--primaryColor);
+  color: white;
+  padding: 1rem 0;
 }
 
 .content .services h3 {
@@ -346,12 +358,13 @@ header .mobile nav .menuMobile.aberto {
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  margin-bottom: 2rem;
 }
 
 .content .services .description .cardDescription {
   width: 40%;
   height: 25rem;
-  background-color: rgba(2, 38, 155, 0.733);
+  background-color: var(--secondaryColor);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -374,6 +387,7 @@ header .mobile nav .menuMobile.aberto {
 .content .services .description .cardDescription .text {
   padding: 10px;
   text-align: center;
+  color: black;
 }
 
 .content .services .description .cardDescription img {
@@ -411,7 +425,6 @@ header .mobile nav .menuMobile.aberto {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(2, 38, 155, 0.733);
   padding-bottom: 15px;
 }
 
@@ -420,15 +433,26 @@ header .mobile nav .menuMobile.aberto {
   font-size: 2rem;
 }
 
-.content .localization iframe {
-  width: 90%;
-  margin: 0 auto;
+.content .localization .containerLocalization {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-@media (max-width: 800px) {
-  .content .localization iframe {
-    width: 100%;
-  }
+.content .localization .containerLocalization iframe {
+  width: 90%;
+  margin: 0 auto;
 }
 
 .goTop {
